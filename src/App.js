@@ -6,7 +6,9 @@ function App() {
   const [data, setData] = useState("");
   return (
     <div className="App">
-      <h1>Test OnChange Event with Text Input</h1>
+      <h1>Jest Testing</h1>
+      <button onClick={() => setData("Hello")}>Update Component</button>
+      <h1>{data}</h1>
     </div>
   );
 }
