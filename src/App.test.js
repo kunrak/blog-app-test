@@ -1,7 +1,25 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("click event test case", () => {
+beforeAll(() => {
+  console.log("*****Before all hooks*****");
+});
+
+test("click event test case 1", () => {
+  render(<App />);
+  const btn = screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("Updated Data")).toBeInTheDocument();
+});
+
+test("click event test case 2", () => {
+  render(<App />);
+  const btn = screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("Updated Data")).toBeInTheDocument();
+});
+
+test("click event test case 3", () => {
   render(<App />);
   const btn = screen.getByRole("button");
   fireEvent.click(btn);
